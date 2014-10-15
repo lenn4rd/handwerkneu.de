@@ -71,9 +71,9 @@ configure :build do
 end
 
 activate :deploy do |deploy|
-  deploy.method   = :sftp
-  deploy.host     = 'handwerkneu.de'
-  deploy.port     = 22
-  deploy.path     = '/home/handwerkneu.de/public'
+  deploy.method = :sftp
+  deploy.host   = 'handwerkneu.de'
+  deploy.port   = 22
+  deploy.path   = '/home/handwerkneu.de/public'
   # deploy.build_before = true
 end
