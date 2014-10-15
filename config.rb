@@ -47,26 +47,33 @@ end
 #   end
 # end
 
-set :css_dir, 'css'
+set :css_dir, 'stylesheets'
 
-set :js_dir, 'js'
+set :js_dir, 'javascripts'
 
-set :images_dir, 'img'
+set :images_dir, 'images'
 
 # Build-specific configuration
 configure :build do
-  # For example, change the Compass output style for deployment
-  # activate :minify_css
-
-  # Minify Javascript on build
-  # activate :minify_javascript
-
-  # Enable cache buster
-  # activate :asset_hash
+  activate :asset_hash
+  activate :minify_css
+  activate :minify_javascript
+  
+  activate :gzip
 
   # Use relative URLs
   # activate :relative_assets
+  
+  # ignore %w( .DS_Store .keep )
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+end
+
+activate :deploy do |deploy|
+  deploy.method   = :sftp
+  deploy.host     = 'handwerkneu.de'
+  deploy.port     = 22
+  deploy.path     = '/home/handwerkneu.de/public'
+  # deploy.build_before = true
 end
