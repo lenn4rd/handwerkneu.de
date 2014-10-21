@@ -1,0 +1,21 @@
+{
+  "name": "handwerkneu",
+  "version": "0.0.1",
+  "authors": [
+    "Lennard Timm <hallo@handwerkneu.de>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "main": "application.css",
+  "homepage": "http://handwerkneu.de",
+  "dependencies": {
+    "bootstrap": "~3.2.0"
+  }
+}
