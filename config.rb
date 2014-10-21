@@ -38,6 +38,7 @@
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
+  activate :bower
 end
 
 # Methods defined in the helpers block are available in templates
@@ -52,6 +53,8 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
+
+sprockets.append_path File.join root, 'bower_components'
 
 # Build-specific configuration
 configure :build do
