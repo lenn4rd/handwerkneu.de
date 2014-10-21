@@ -16,6 +16,6 @@
   "main": "application.css",
   "homepage": "http://handwerkneu.de",
   "dependencies": {
-    "bootstrap": "~3.2.0"
+    "bootstrap-sass-official": "~3.2.0"
   }
 }
